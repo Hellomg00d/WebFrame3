@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BLog</title>
+</head>
+<body>
+
+    <h1>Blog</h1>
+{% for p in posts %} <!--파이썬 코드를 쓸려면 중괄호 써줘야 함 -->
+    <hr/>
+    <h2>{{ p.title }}</h2><!--변수를 쓸려면 중괄호 두번쓰기-->
+    <h4>{{ p.created_at }}</h4>
+    <p> {{ p.content }}</p>
+{% endfor %}<!--for문의 끝에는 endfor써줘야하고 if문의 끝에는 endif써줘야 함-->
+</body>
+</html>
